@@ -1,0 +1,27 @@
+{
+  "org_name": "your-org-name",
+  "repo_prefix": "hootcamp-",
+  "repos_dir": "repos",
+  "repos_csv": "repos/github_repos.csv",
+  "reports_dir": "reports",
+  "grades_dir": "grades",
+  "canvas_csv": "roster/canvas.csv",
+  "cache_dir": "cache",
+  "retrieval": {
+    "chunk_size": 1000,
+    "overlap": 200,
+    "top_k": 8
+  },
+  "llm": {
+    "provider": "lmstudio",
+    "lmstudio": {
+      "host": "http://localhost:11434",
+      "model": "qwen-3.6",
+      "embed_model": ""
+    },
+    "fallback_embedding": "sentence-transformers/all-mpnet-base-v2"
+  },
+  "gate_thresholds": {
+    "must_have": ["ai_integration_presence","backend_complete","authentication","readme_completeness","deployment_live","demo_video_present"]
+  }
+}
