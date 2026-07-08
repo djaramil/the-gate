@@ -1,0 +1,9 @@
+Gate,Pass,Fail,Pass Rate %
+ai_integration,38,1,97.4
+backend_database,33,6,84.6
+authentication,39,0,100.0
+readme_completeness,38,1,97.4
+deployment_live,33,6,84.6
+demo_video_present,31,8,79.5
+
+Overall,17,24,41.5

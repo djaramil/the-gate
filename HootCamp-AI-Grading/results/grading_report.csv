@@ -1,0 +1,41 @@
+Student Name,Email,Repository,Status,Reason,Submission URL,Gate: AI Integration,Gate: Backend Database,Gate: Authentication,Gate: Readme Completeness,Gate: Deployment Live,Gate: Demo Video Present
+Leon Fallett,lfallett2021@fau.edu,leonfallett10-netizen_studyflow,FAIL,AST: No Supabase usage detected in AST,https://github.com/leonfallett10-netizen/studyflow,PASS,PASS,PASS,PASS,PASS,PASS
+H Ike Machover,imachover2013@fau.edu,week3-notypos,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-notypos,PASS,PASS,PASS,PASS,PASS,PASS
+Alexander Hoffmann,ahoffm15@fau.edu,week3-CodaLx,FAIL,AST: No Supabase usage detected in AST,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-CodaLx,PASS,PASS,PASS,PASS,PASS,PASS
+Matthew Greenberg,greenbergm2015@fau.edu,week3-matthewalexander97,FAIL,Missing: demo_video_present,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-matthewalexander97,PASS,PASS,PASS,PASS,PASS,FAIL
+Angelica Vides,avides2019@fau.edu,week3-Angelica-Vides,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-Angelica-Vides,PASS,PASS,PASS,PASS,PASS,PASS
+Andrea Pena,penaa2019@fau.edu,week3-a-pena,FAIL,Missing: demo_video_present,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-a-pena,PASS,PASS,PASS,PASS,PASS,FAIL
+Bianca Guillaume,bguillaume2024@fau.edu,week3-Illianca01,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-Illianca01,PASS,PASS,PASS,PASS,PASS,PASS
+John Hernandez,jherna65@fau.edu,week3-bluefate,FAIL,AST: No Supabase usage detected in AST,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-bluefate,PASS,PASS,PASS,PASS,PASS,PASS
+Md Ferdouse Bhuiya,bhuiyam2026@fau.edu,week3-ferdousbhuiya,FAIL,Missing: backend_database; AST: No auth library detected in AST,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-ferdousbhuiya,PASS,FAIL,PASS,PASS,PASS,PASS
+Aryan Bhagat,bhagata2025@fau.edu,week3-Aryanbhagat23,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-Aryanbhagat23,PASS,PASS,PASS,PASS,PASS,PASS
+MD Jelani,mjelani2022@fau.edu,week3-Sowrav12,FAIL,"Missing: ai_integration, demo_video_present",https://github.com/Sowrav12/week3-Sowrav12.git,FAIL,PASS,PASS,PASS,PASS,FAIL
+CJ Bingham,binghamc2024@fau.edu,week3-cjb1077,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-cjb1077,PASS,PASS,PASS,PASS,PASS,PASS
+Brandon Valencia,bvalencia2023@fau.edu,week3-ImCasualyCoding,FAIL,"Missing: deployment_live, demo_video_present; AST: No Supabase usage detected in AST, No AI library detected in AST",https://github.com/FAU-AI-HootCamp-Summer-2026/week3-ImCasualyCoding,PASS,PASS,PASS,PASS,FAIL,FAIL
+Ana Cecilia Barahona,abarahonacab2025@fau.edu,week3-abarahonacab2025-code,PASS,All gate requirements met,https://github.com/abarahonacab2025-code/week3-abarahonacab2025-code.git,PASS,PASS,PASS,PASS,PASS,PASS
+Jonathan Beckerman,jbeckerman2023@fau.edu,week3-Jbeckfau,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-Jbeckfau,PASS,PASS,PASS,PASS,PASS,PASS
+Chris Bristol,cbristol2014@fau.edu,week3-christopherbristol,FAIL,Missing: demo_video_present,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-christopherbristol,PASS,PASS,PASS,PASS,PASS,FAIL
+Sumedh Vizarsu Yeshwanth Krishna,svizarsuyesh2024@fau.edu,week3-v6y4k2s,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-v6y4k2s.git,PASS,PASS,PASS,PASS,PASS,PASS
+Paulina DeVito,pdevito2019@fau.edu,week3-Paulina004,FAIL,"Missing: deployment_live; AST: No Supabase usage detected in AST, No AI library detected in AST",https://github.com/FAU-AI-HootCamp-Summer-2026/week3-Paulina004,PASS,PASS,PASS,PASS,FAIL,PASS
+Nick Jones,nicholasjones@fau.edu,week3-NicholasJonesFAU,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-NicholasJonesFAU,PASS,PASS,PASS,PASS,PASS,PASS
+Frank Meoni,fmeoni@fau.edu,week3-frankpmjr54,FAIL,"Missing: backend_database, deployment_live, demo_video_present",https://github.com/FAU-AI-HootCamp-Summer-2026/week3-frankpmjr54,PASS,FAIL,PASS,PASS,FAIL,FAIL
+Duha Iqbal,diqbal2023@fau.edu,week3-diqbal2023,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-diqbal2023.git,PASS,PASS,PASS,PASS,PASS,PASS
+Depanker Shrestha,dshrestha2022@fau.edu,week3-Tenzing149,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-Tenzing149,PASS,PASS,PASS,PASS,PASS,PASS
+Raja Manendra Surisetty,rsurisetty2025@fau.edu,week3-Raj102002,FAIL,"AST: No Supabase usage detected in AST, No AI library detected in AST",https://github.com/FAU-AI-HootCamp-Summer-2026/week3-Raj102002,PASS,PASS,PASS,PASS,PASS,PASS
+Ivonne Palomino,palominoi2025@fau.edu,week3-ivonnep3000,FAIL,"Missing: backend_database, demo_video_present",https://github.com/FAU-AI-HootCamp-Summer-2026/week3-ivonnep3000.git,PASS,FAIL,PASS,PASS,PASS,FAIL
+Julio Altamirano,jaltamirano2021@fau.edu,week3-jaltamirano6933,FAIL,Missing: backend_database,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-jaltamirano6933,PASS,FAIL,PASS,PASS,PASS,PASS
+Zeporah Jerome,zjerome2023@fau.edu,week3-zjerome2023,FAIL,Missing: backend_database,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-zjerome2023,PASS,FAIL,PASS,PASS,PASS,PASS
+Matthew Wyatt,mwyatt2023@fau.edu,week3-MatthewOscar,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-MatthewOscar,PASS,PASS,PASS,PASS,PASS,PASS
+Oswaldo Carretero,ocarreteropa2023@fau.edu,week3-osicp,FAIL,"AST: No Supabase usage detected in AST, No AI library detected in AST",https://github.com/FAU-AI-HootCamp-Summer-2026/week3-osicp.git,PASS,PASS,PASS,PASS,PASS,PASS
+Richelle Williams,williamsr2023@fau.edu,week3-RichWilliams772,FAIL,AST: No Supabase usage detected in AST,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-RichWilliams772,PASS,PASS,PASS,PASS,PASS,PASS
+Skylar Gutman,sgutman@fau.edu,week3-skylargutman,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-skylargutman,PASS,PASS,PASS,PASS,PASS,PASS
+Sathvik Gajula,sgajula2023@fau.edu,week3-sathvikgajula,FAIL,"AST: No Supabase usage detected in AST, No AI library detected in AST",https://github.com/FAU-AI-HootCamp-Summer-2026/week3-sathvikgajula,PASS,PASS,PASS,PASS,PASS,PASS
+Balaprathap Chellakkannu,bchellakkann2025@fau.edu,week3-Balaprathap,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-Balaprathap,PASS,PASS,PASS,PASS,PASS,PASS
+Joshua Lopez,joshualopez2016@fau.edu,week3-joshualopez2016,FAIL,"Missing: deployment_live; AST: No Supabase usage detected in AST, No AI library detected in AST",https://github.com/FAU-AI-HootCamp-Summer-2026/week3-joshualopez2016,PASS,PASS,PASS,PASS,FAIL,PASS
+Ashamarie Parke,parkea2023@fau.edu,week3-aparke1,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-aparke1,PASS,PASS,PASS,PASS,PASS,PASS
+Anthony Hage,ahage2024@fau.edu,week2-Anthonyhage99,PASS,All gate requirements met,https://github.com/FAU-AI-HootCamp-Summer-2026/week2-Anthonyhage99.git,PASS,PASS,PASS,PASS,PASS,PASS
+Isaiah Cruz,icruz2020@fau.edu,week3-CruzIsaiah,PASS,All gate requirements met,https://th-five-bice.vercel.app/,FAIL,FAIL,FAIL,FAIL,FAIL,FAIL
+Gissella Palomino,grodri32@fau.edu,week3-gissellapam,FAIL,Missing: demo_video_present; AST: No Supabase usage detected in AST,https://employee-tracker-six-omega.vercel.app/login,PASS,PASS,PASS,PASS,PASS,FAIL
+Sri Latha Kolli,kollis2023@fau.edu,week3-srik2709,FAIL,"Missing: backend_database, deployment_live",https://github.com/FAU-AI-HootCamp-Summer-2026/week3-srik2709,PASS,FAIL,PASS,PASS,FAIL,PASS
+Mahesh Neelakanta,mahesh@fau.edu,week3-faumahesh,FAIL,"Missing: deployment_live; AST: No Supabase usage detected in AST, No AI library detected in AST",https://github.com/FAU-AI-HootCamp-Summer-2026/week3-faumahesh,PASS,PASS,PASS,PASS,FAIL,PASS
+Yaswanth Durga Kiran Kotipalli,ykotipalli2024@fau.edu,week3-Yaswanth-Kotipalli,FAIL,Missing: readme_completeness,https://github.com/FAU-AI-HootCamp-Summer-2026/week3-Yaswanth-Kotipalli/tree/main,PASS,PASS,PASS,FAIL,PASS,PASS
