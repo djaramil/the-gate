@@ -66,11 +66,23 @@ function scanFile(filePath) {
         if (arg.type === 'StringLiteral') {
           const src = arg.value;
           // AI/backend libraries via require
-          if (/(openai|@google\/generative-ai|@supabase|supabase|axios|node-fetch|gemini)/i.test(src)) {
+          if (/(openai|@google\/generative-ai|@supabase|supabase|axios|node-fetch|gemini|@anthropic-ai|@anthropic|anthropic|@ai-sdk|ai-sdk|^ai$|ollama)/i.test(src)) {
             findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'AI_OR_BACKEND_LIB', message:`require ${src}`});
           }
+          // Back4App/Parse via require
+          if (/(parse|@parse\/parse|parse\/react-native|parse\/node)/i.test(src)) {
+            findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'BACK4APP_PARSE', message:`Back4App/Parse require ${src}`});
+          }
+          // MongoDB via require
+          if (/(^mongodb$|mongoose|@mongodb)/i.test(src)) {
+            findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'MONGODB_LIB', message:`MongoDB require ${src}`});
+          }
+          // SQL / Neon / Drizzle via require
+          if (/(drizzle-orm|@neondatabase|neon|postgres|pg$|prisma|@prisma)/i.test(src)) {
+            findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'SQL_DB_LIB', message:`SQL/ORM require ${src}`});
+          }
           // Auth libraries via require
-          if (/(jsonwebtoken|passport|@auth|next-auth)/i.test(src)) {
+          if (/(jsonwebtoken|passport|@auth|next-auth|better-auth)/i.test(src)) {
             findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'AUTH_LIB', message:`auth library require ${src}`});
           }
         }
@@ -80,12 +92,27 @@ function scanFile(filePath) {
       const src = pathNode.node.source.value || '';
       
       // AI/backend libraries
-      if (/(openai|@google\/generative-ai|@supabase|supabase|axios|node-fetch|gemini)/i.test(src)) {
+      if (/(openai|@google\/generative-ai|@supabase|supabase|axios|node-fetch|gemini|@anthropic-ai|@anthropic|anthropic|@ai-sdk|ai-sdk|^ai$|ollama)/i.test(src)) {
         findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'AI_OR_BACKEND_LIB', message:`import ${src}`});
       }
       
+      // Back4App/Parse via import
+      if (/(parse|@parse\/parse|parse\/react-native|parse\/node)/i.test(src)) {
+        findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'BACK4APP_PARSE', message:`Back4App/Parse import ${src}`});
+      }
+
+      // MongoDB via import
+      if (/(^mongodb$|mongoose|@mongodb)/i.test(src)) {
+        findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'MONGODB_LIB', message:`MongoDB import ${src}`});
+      }
+
+      // SQL / Neon / Drizzle via import
+      if (/(drizzle-orm|@neondatabase|neon|postgres|pg$|prisma|@prisma)/i.test(src)) {
+        findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'SQL_DB_LIB', message:`SQL/ORM import ${src}`});
+      }
+      
       // Auth libraries
-      if (/(jsonwebtoken|passport|@auth|next-auth)/i.test(src)) {
+      if (/(jsonwebtoken|passport|@auth|next-auth|better-auth)/i.test(src)) {
         findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'AUTH_LIB', message:`auth library import ${src}`});
       }
     },
@@ -98,6 +125,36 @@ function scanFile(filePath) {
       // Supabase identifiers
       if (['supabase', 'createClient'].includes(pathNode.node.name)) {
         findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'SUPABASE_HINT', message:`Supabase identifier ${pathNode.node.name}`});
+      }
+      
+      // Back4App/Parse identifiers
+      if (['Parse', 'parse', 'ParseObject', 'ParseUser', 'ParseQuery'].includes(pathNode.node.name)) {
+        findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'BACK4APP_HINT', message:`Back4App/Parse identifier ${pathNode.node.name}`});
+      }
+
+      // MongoDB identifiers
+      if (['mongoose', 'MongoClient', 'ObjectId'].includes(pathNode.node.name)) {
+        findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'MONGODB_HINT', message:`MongoDB identifier ${pathNode.node.name}`});
+      }
+
+      // SQL/ORM identifiers
+      if (['drizzle', 'prisma', 'PrismaClient'].includes(pathNode.node.name)) {
+        findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'SQL_DB_HINT', message:`SQL/ORM identifier ${pathNode.node.name}`});
+      }
+
+      // AI adapter / provider identifiers (raw fetch wrappers, no SDK import)
+      if (['callGemini', 'callOpenAI', 'callAnthropic', 'aiAdapter', 'generateContent', 'streamText', 'generateObject', 'ollama'].includes(pathNode.node.name)) {
+        findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'AI_HINT', message:`AI identifier ${pathNode.node.name}`});
+      }
+    },
+    StringLiteral(pathNode){
+      const value = pathNode.node.value || '';
+      // Direct AI provider API endpoints (no SDK required)
+      if (/(api\.openai\.com|api\.anthropic\.com|generativelanguage\.googleapis\.com|openai\.azure\.com|api\.groq\.com|integrate\.api\.nvidia\.com|localhost:11434|127\.0\.0\.1:11434|\/api\/generate|\/api\/chat|cognitiveservices\.azure\.com|\/vision\/v3\.|visualFeatures=)/i.test(value)) {
+        findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'AI_ENDPOINT', message:`AI API endpoint ${value}`});
+      }
+      if (/(^ollama$|ollama\.com|OLLAMA_|Computer Vision|AZURE_CV)/i.test(value)) {
+        findings.push({file:filePath, line:pathNode.node.loc.start.line, code:'AI_HINT', message:`AI provider reference ${value}`});
       }
     }
   });

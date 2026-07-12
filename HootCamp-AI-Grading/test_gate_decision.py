@@ -3,7 +3,7 @@
 
 import sys
 sys.path.insert(0, '.')
-from hc_evaluate import compute_gate_pass
+from hc_evaluate import compute_gate_pass, is_evaluation_complete, analyze_readme_completeness, apply_readme_override
 
 def test_all_requirements_pass():
     """Test gate pass when all requirements are met"""
@@ -66,7 +66,7 @@ def test_ast_validation_js_ts_repo():
     
     result = compute_gate_pass(gate_evaluations, ast_findings)
     assert result['gate_pass'] == False, "Should fail when AST validation fails"
-    assert 'No Supabase usage detected in AST' in result['ast_issues'], "Should report AST issue"
+    assert 'No database library (Supabase, Back4App, MongoDB, or SQL/ORM) detected in AST' in result['ast_issues'], "Should report AST issue"
     assert result['has_js_ts_files'] == True, "Should detect JS/TS files"
     print("✓ AST validation JS/TS repo test passed")
 
@@ -124,6 +124,32 @@ def test_commit_hygiene_optional():
     assert result['gate_pass'] == True, "Should pass even without commit_hygiene"
     print("✓ Commit hygiene optional test passed")
 
+def test_incomplete_checkpoint_not_complete():
+    """Incomplete checkpoint entries should be treated as not done."""
+    stub = {
+        'repo_name': 'week3-CruzIsaiah',
+        'gate_pass': True,
+        'gate_decision': {'gate_pass': True, 'missing_requirements': [], 'ast_issues': []},
+    }
+    assert is_evaluation_complete(stub) is False
+    print("✓ Incomplete checkpoint test passed")
+
+
+def test_readme_analysis_yaswanth():
+    """Yaswanth README should pass deterministic completeness check."""
+    path = 'repos/FAU-AI-HootCamp-Summer-2026_week3-Yaswanth-Kotipalli'
+    result = analyze_readme_completeness(path)
+    assert result['present'] is True, f"Expected present=True, got {result}"
+    assert result['fields']['email'] is True
+    assert result['fields']['live_link'] is True
+    assert result['fields']['demo_video'] is True
+
+    gates = {'readme_completeness': {'present': False, 'explanation': 'No README documentation found'}}
+    updated = apply_readme_override(gates, path)
+    assert updated['readme_completeness']['present'] is True
+    print("✓ README analysis Yaswanth test passed")
+
+
 if __name__ == "__main__":
     print("Running gate decision unit tests...")
     test_all_requirements_pass()
@@ -132,4 +158,6 @@ if __name__ == "__main__":
     test_ast_validation_skipped_python_repo()
     test_multiple_missing_requirements()
     test_commit_hygiene_optional()
+    test_incomplete_checkpoint_not_complete()
+    test_readme_analysis_yaswanth()
     print("\n✓ All gate decision tests passed!")

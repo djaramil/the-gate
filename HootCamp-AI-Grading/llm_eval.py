@@ -10,7 +10,7 @@ from retrieval import CodeRetriever
 # Optional gates (not required for gate pass) are commented out to speed up evaluation
 GATE_FEATURES = {
     'ai_integration': "AI features, OpenAI API, language model, LLM, machine learning, AI-powered functionality, intelligent features",
-    'backend_database': "Supabase, database, PostgreSQL, data persistence, backend API, CRUD operations",
+    'backend_database': "Supabase, Back4App, Parse, database, PostgreSQL, data persistence, backend API, CRUD operations",
     'authentication': "auth, login, signup, signIn, signUp, signOut, user authentication, protected routes, session management",
     'readme_completeness': "README, documentation, setup instructions, project description, deployment link, demo video",
     'deployment_live': "deployment, Vercel, Netlify, Render, live URL, production build, hosting",
